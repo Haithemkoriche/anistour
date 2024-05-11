@@ -234,7 +234,29 @@
     </section>
     <!--  -->
 
-    
+    <div class="carousel-container">
+      <div class="carousel-background"></div>
+      <div class="carousel-content">
+        <div class="carousel-slide active">
+          <h1>Excellent accueil, proposition d’autres modèles moyennant
+            supplément mais qui donne le choix. Véhicule de qualité et
+            propre. Ravi d’avoir loué chez eux.</h1>
+          <p> — Guillaume, Paris</p>
+        </div>
+        <div class="carousel-slide">
+          <h1>Super expérience de location ! Simplicité du processus et de la facturation. Nombreuses agences. Personnel très accueillant et aidant. À recommander !</h1>
+          <p>— Marie-Andrée, Madrid</p>
+        </div>
+        <div class="carousel-slide">
+          <h1>Accueil et personnel parfait. Nous avons eu une voiture de gamme supérieure à celle réservée, elle était propre et en très bon état. Je recommande à 100% !</h1>
+          <p>— Guillaume, Munich</p>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
     <!--  -->
     <section class="reservation pt-5 pb-5">
       <div class="container pt-5 pb-5 rounded d-lg-none" style="width: 70%; background-color: #f3f4f6">
@@ -306,6 +328,27 @@
         </p>
       </div>
     </footer>
+    <script>
+      const slides = document.querySelectorAll(".carousel-slide");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.classList.add("active");
+          } else {
+            slide.classList.remove("active");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
