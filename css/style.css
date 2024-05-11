@@ -8282,11 +8282,11 @@ h1, h2, h3, h4, h5,
   .work .text {
     padding: 35px;
     padding-top: 0; }
-    .work .text h3 {
+    /* .work .text h3 {
       font-size: 34px;
       font-weight: 400;
       font-family: "Playfair Display", serif;
-      margin-bottom: 0; }
+      margin-bottom: 0; } */
       .work .text h3 a {
         color: #fff; }
     .work .text .cat {
