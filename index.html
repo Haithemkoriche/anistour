@@ -34,19 +34,18 @@
     <title>Anis Tour</title>
   </head>
   <body>
-
-            <!--  -->
+    <!--  -->
     <section class="hero">
-      
       <div class="container">
         <div class="header d-flex flex-row align-items-center justify-content-between text-light me-auto ms-auto pt-4" style="width: 95%">
-          <div class="logo" style="width: 30%">
-            <i class="fa-solid fa-bars"></i>
+          <div class="logo " style="width: 30%">
+            <button class="btn text-white d-lg-none" data-bs-toggle="modal" data-bs-target="#slideMenu"><i class="fas fa-bars"></i></button>
             <img src="img/logo-anistour-white.svg" class="img img-fluid logo w-50" alt="" />
           </div>
-          <ul class="navbar-nav flex-row justify-content-around" style="width: 50%">
+          <!-- Navbar for large screens -->
+          <ul class="navbar-nav flex-row justify-content-around d-none d-lg-flex" style="width: 50%">
             <li class="nav-item">
-              <a class="nav-link active color-white" aria-current="page" href="#"> Accueil </a>
+              <a class="nav-link active color-white" aria-current="page" href="#">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">À propos</a>
@@ -64,6 +63,29 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
+          <!-- Slide menu for small screens -->
+          <!-- <button class="btn btn-outline-light btn-sm d-lg-none" data-bs-toggle="modal" data-bs-target="#slideMenu"><i class="fas fa-bars"></i> Menu</button> -->
+        </div>
+        <!-- Slide Menu Modal -->
+        <div class="modal fade" id="slideMenu" tabindex="-1" aria-labelledby="slideMenuLabel" aria-hidden="true" style="height: fit-content">
+          <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="slideMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul class="list-group">
+                  <li class="list-group-item">Accueil</li>
+                  <li class="list-group-item">À propos</li>
+                  <li class="list-group-item">Flotte</li>
+                  <li class="list-group-item">Conditions</li>
+                  <li class="list-group-item">FAQ</li>
+                  <li class="list-group-item">Contact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="calendar bg-light d-flex flex-column justify-content-start row-gap-3 container ps-4 pt-2 pb-4 me-auto ms-auto" style="width: 95%; height: fit-content; border-radius: 16px">
           <!-- <div class="rows">
@@ -77,7 +99,7 @@
               <i class="fa fa-car"></i> Utilitaires
             </button>
           </div> -->
-          <div class="row align-items-center">
+          <div class="row align-items-center ">
             <div class="col-8">
               <div class="">Retrait et retour</div>
               <div class="column-2">
@@ -140,10 +162,10 @@
       </div>
     </section>
     <section class="pub text-center text-white pt-2 pb-2 w-100" style="background-color: #990000; height: 500px; position: absolute">
-      <span class="fw-bold text-center" style="font-size: 2.5rem"> LOUEZ HAUT DE GAMME </span>
+      <span class="fw-bold text-center" style="font-size: 3vw"> LOUEZ HAUT DE GAMME </span>
       <br />
-      <span class="fw-bold text-center" style="font-size: 2.5rem"> À PRIX ATTRACTIF. </span>
-      <div class="fw-semibold">Location de voitures premium au meilleur prix. Dans le monde entier.</div>
+      <span class="fw-bold text-center" style="font-size: 3vw"> À PRIX ATTRACTIF. </span>
+      <div class="fw-semibold" style="font-size: 2vw">Location de voitures premium au meilleur prix. Dans le monde entier.</div>
     </section>
     <section class="why-anis-tour pt-5 pb-5 ms-auto me-auto mt-4" style="background-color: #f3f4f6; width: 90%; height: fit-content; position: relative; top: 200px; border-radius: 16px">
       <div class="rows fw-bold ps-5 pt-2 pb-4 h4">Pourquoi louer une voiture avec ANISTOUR ?</div>
@@ -241,10 +263,8 @@
       <div class="carousel-background"></div>
       <div class="carousel-content">
         <div class="carousel-slide active">
-          <h1>Excellent accueil, proposition d’autres modèles moyennant
-            supplément mais qui donne le choix. Véhicule de qualité et
-            propre. Ravi d’avoir loué chez eux.</h1>
-          <p> — Guillaume, Paris</p>
+          <h1>Excellent accueil, proposition d’autres modèles moyennant supplément mais qui donne le choix. Véhicule de qualité et propre. Ravi d’avoir loué chez eux.</h1>
+          <p>— Guillaume, Paris</p>
         </div>
         <div class="carousel-slide">
           <h1>Super expérience de location ! Simplicité du processus et de la facturation. Nombreuses agences. Personnel très accueillant et aidant. À recommander !</h1>
@@ -262,7 +282,7 @@
     </div>
     <!--  -->
     <section class="reservation pt-5 pb-5">
-      <div class="container pt-5 pb-5 d-lg-none" style="width: 70%; background-color: #f3f4f6; border-radius: 16px;">
+      <div class="container pt-5 pb-5 d-lg-none" style="width: 70%; background-color: #f3f4f6; border-radius: 16px">
         <div class="d-flex flex-column row-gap-3">
           <h3>Réservation par téléphone</h3>
           <p>Vous pouvez nous contacter par téléphone pendant nos heures d’ouverture. Horaires du centre de réservation : 07h00 - 22h00 et 7/7 jours.</p>
@@ -273,7 +293,7 @@
         </div>
       </div>
       <!-- for lg -->
-      <div class="container pt-5 pb-5  d-lg-block d-sm-none" style="width: 70%; background-color: #f3f4f6; border-radius: 16px;">
+      <div class="container pt-5 pb-5 d-lg-block d-sm-none" style="width: 70%; background-color: #f3f4f6; border-radius: 16px">
         <div class="d-flex flex-row row-gap-3 align-items-center">
           <img src="img/call-icon.svg" width="90px" height="90px" alt="" srcset="" />
           <div class="col">
